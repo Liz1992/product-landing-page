@@ -1,0 +1,165 @@
+*{
+	margin: 0;
+	padding: 0;
+	background: #EEEEEE;
+}
+a{
+	text-decoration: none;
+	color: grey;
+	font-family: Georgia, serif;
+}
+#header{
+	height: 60px;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	display: grid;
+	grid-template-columns: 4fr 3fr;
+}
+img{
+	height: 60px;
+	width: 300px;
+}
+#content{
+	padding-top: 80px;
+}
+p[class="h4"]{
+	margin-top: 20px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+form{
+	margin-bottom: 60px;
+	display: grid;
+	grid-template-columns: 1fr;
+	align-items: center;
+	justify-items: center;
+	grid-row-gap: 15px;
+}
+input{
+	width: 300px;
+	border-radius: 3px;
+	border-style: solid;
+	border-color: rgba(51, 153, 255, .5);
+}
+ul{
+	margin: 30px 120px;
+}
+li{
+	list-style: none;
+	margin-bottom: 15px;
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	align-items: stretch;
+	justify-items: stretch;
+}
+#material, #shipping, #battery{
+	max-height: 80px;
+	max-width: 60px;
+	border-radius: 3px;
+	grid-area: 1/1/3/2;
+	align-self: center;
+	justify-self: center;
+}
+.head{
+	font-weight: bold;
+	grid-area: 1/2/2/6;
+}
+p:nth-child(3){
+	grid-area: 2/2/3/6;
+}
+figure{
+	margin: 40px 15px 20px;
+	text-align: center;
+}
+#pricing{
+	padding: 40px 160px;
+	columns: 3;
+	column-gap: 55px;
+}
+#pricing > div{
+	border: 1px solid grey;
+	border-radius: 2px;
+	text-align: center;
+	overflow: hidden;
+	height: 320px;
+	min-width: 200px;
+}
+h5{
+	padding: 25px 3px;
+	background: grey;
+}
+#pricing > div > p:nth-child(2){
+	font-size: 20px;
+	font-weight: bold;
+}
+#pricing > div > button:last-child{
+	margin: 10px 0 20px;
+}
+footer{
+	background: #d9d9d9;
+	padding: 8px 25px;
+}
+footer > section, footer > p{
+	background: #d9d9d9;
+	text-align: right;
+}
+footer > section > a{
+	font-size: 18px;
+	padding-right: 10px;
+}
+@media screen and (max-width: 800px) {
+	#header{
+	    height: 120px;
+	    display: grid;
+	    grid-template-columns: 1fr;
+	    align-items: center;
+	    justify-items: center;
+    }
+    #content{
+	    padding-top: 120px;
+    }
+}
+@media screen and (max-width: 950px) {
+	#pricing{
+	    columns: 1;
+	    column-gap: 0;
+    }
+    #pricing > div{
+        margin: 50px auto;
+        min-width: 250px;
+        max-width: 350px;
+    }
+}
+@media screen and (max-width: 570px) {
+	#material, #shipping, #battery{
+	    display: none;
+    }
+    li{
+	    align-items: center;
+	    justify-items: center;
+    }
+    .head{
+	    grid-area: 1/1/2/6;
+    }
+    p:nth-child(3){
+	    grid-area: 2/1/3/6;
+    }
+    figure{
+	    margin: 0;
+    }
+    #video{
+    	max-width: 100vw;
+    	max-height: 315px;
+    }
+	#pricing{
+	    columns: 1;
+	    column-gap: 0;
+	    padding: 40px 20px;
+    }
+    #pricing > div{
+        margin: 50px auto;
+        min-width: 200px;
+        max-width: 250px;
+    }
+}
